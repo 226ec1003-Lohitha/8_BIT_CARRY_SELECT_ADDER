@@ -196,10 +196,7 @@ All layouts were designed using Cadence Virtuoso Layout Suite XL.
 ### 8-bit CSLA Output
 ![CSLA Output](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/8_BIT_CSLA_OUTPUT_AFTER_CHANGES%20(1).jpeg)
 
-### CSLA Output Waveform
-![Output CSLA](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/OUTPUT_CLSA.png)
 
-![CSLA Output](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/output_CSLA.png)
 ## 6. Physical Verification
 
 | Check | Status | Tool |
