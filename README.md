@@ -284,20 +284,6 @@ To ensure reliable, metastable-free synchronous operation across registers drivi
 | Timing Slack Margin | T<sub>slack</sub> | 9.887 ns | Positive slack at 100 MHz: T<sub>slack</sub> = T<sub>clk</sub> − [t<sub>setup</sub> + t<sub>pd,max</sub> + t<sub>skew</sub>] |
 | Maximum Operating Frequency | f<sub>max</sub> | ≈ 6.74 GHz | f<sub>max</sub> = 1 / (t<sub>cq</sub> + t<sub>pd,max</sub> + t<sub>setup</sub> + t<sub>skew</sub>), with t<sub>cq</sub> ≈ 35 ps |
 
-### 7.5 Transient Output Waveforms
-
-Transient simulation of the 8-bit CSLA over about 250 ns, showing the stimulus signals A, B, C, D and C<sub>in</sub> and the sum outputs S<0> to S<7>.
-
-![8-bit CSLA transient output after changes](8_BIT_CSLA_OUTPUT_AFTER_CHANGES.jpeg)
-
-Additional output plots:
-
-![CSLA output 1](OUTPUT_CLSA.png)
-
-![CSLA output 2](output_CSLA.png)
-
-![CSLA output 3](cls_OPUT.png)
-
 ---
 
 ## 8. Observations and Future Work
