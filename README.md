@@ -156,35 +156,35 @@ C4 is the carry out of the lower 4-bit block. It selects which precomputed upper
 
 Cell `2_1_mux`: one inverter generates the complement of the select S, and two transmission gates pass A or B to Y. Six transistors in total, all W = 120 nm, L = 45 nm.
 
-![2:1 mux schematic](21_MUX.png)
+![2:1 mux schematic](hybris_adder_4bit_tb/schematic/21_MUX.png)
 
 ### 4.2 4-Bit 2:1 Multiplexer
 
 Cell `2x1_4bit`: four 2:1 muxes sharing a single select line. Bus inputs A<3:0> and B<3:0>, bus output Y<3:0>.
 
-![4-bit 2:1 mux schematic](4_BIT_2X1_MUX.png)
+![4-bit 2:1 mux schematic](hybris_adder_4bit_tb/schematic/4_BIT_2X1_MUX.png)
 
 ### 4.3 1-Bit Hybrid Adder
 
 Cell `HYBRID_ADDER`: 22 transistors and 16 nets. Inverters generate A<sub>bar</sub> and C<sub>in,bar</sub>. Pass-transistor stages produce the XOR/XNOR of A and B (AxorB), and transmission gates then form Sum and Carry.
 
-![1-bit hybrid adder schematic](HYBRID_ADDER.png)
+![1-bit hybrid adder schematic](hybris_adder_4bit_tb/schematic/HYBRID_ADDER.png)
 
 ### 4.4 4-Bit Hybrid Adder
 
 Cell `hybrid_addr`: four 1-bit hybrid adders in a ripple chain, with buses A<3:0>, B<3:0>, S<3:0> and a single carry output.
 
-![4-bit hybrid adder](4bit_hybrida_dder.png)
+![4-bit hybrid adder](hybris_adder_4bit_tb/schematic/4bit_hybrida_dder.png)
 
-![4-bit hybrid adder (alternate view)](HYBRID_ADDER_4BIT.png)
+![4-bit hybrid adder (alternate view)](hybris_adder_4bit_tb/schematic/HYBRID_ADDER_4BIT.png)
 
 ### 4.5 8-Bit CSLA Top Level
 
-![8-bit CSLA top-level schematic](8_BIT_CLSA.png)
+![8-bit CSLA top-level schematic](hybris_adder_4bit_tb/schematic/8_BIT_CLSA.png)
 
 ### 4.6 Test Bench
 
-![Adder test bench](ADDER_TEAST_BENCH.png)
+![Adder test bench](hybris_adder_4bit_tb/schematic/ADDER_TEAST_BENCH.png)
 
 ---
 
@@ -194,23 +194,23 @@ All layouts were drawn in Virtuoso Layout Suite XL.
 
 **1-bit hybrid adder**
 
-![1-bit hybrid adder layout](layout/4_bit_dac_adder.png)
+![1-bit hybrid adder layout](4_bit_dac_adder.png)
 
 **4-bit hybrid adder**
 
-![4-bit hybrid adder layout](layout/4_bit_dac_hybrid_adder_4bit_layout.png)
+![4-bit hybrid adder layout](4_bit_dac_hybrid_adder_4bit_layout.png)
 
 **2:1 multiplexer**
 
-![2:1 mux layout](layout/2X1_MUX_LAYOUT.png)
+![2:1 mux layout](4bit_2X1-mux_layout.png)
 
 **4-bit 2:1 multiplexer**
 
-![4-bit 2:1 mux layout](layout/4bit_2X1-mux_layout.png)
+![4-bit 2:1 mux layout](4bit_2X1-mux_layout.png)
 
 **Complete 8-bit CSLA**
 
-![Complete 8-bit CSLA layout](layout/complete_CSLA_LAYOUT.png)
+![Complete 8-bit CSLA layout](complete_CSLA_LAYOUT.png)
 
 ---
 
