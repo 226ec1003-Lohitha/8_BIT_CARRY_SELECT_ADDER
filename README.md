@@ -152,68 +152,54 @@ C4 is the carry out of the lower 4-bit block. It selects which precomputed upper
 
 ## 4. Schematic Design
 
-### 4.1 2:1 Multiplexer
+### 2:1 Multiplexer
+![2:1 MUX](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/21_MUX.png)
 
-Cell `2_1_mux`: one inverter generates the complement of the select S, and two transmission gates pass A or B to Y. Six transistors in total, all W = 120 nm, L = 45 nm.
+### 4-bit 2:1 Multiplexer
+![4-bit 2:1 MUX](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/4_BIT_2X1_MUX.png)
 
-![2:1 mux schematic](21_MUX.png)
+### 1-bit Hybrid Adder
+![1-bit Hybrid Adder](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/HYBRID_ADDER.png)
 
-### 4.2 4-Bit 2:1 Multiplexer
+### 4-bit Hybrid Adder
+![4-bit Hybrid Adder](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/4bit_hybrida_dder.png)
 
-Cell `2x1_4bit`: four 2:1 muxes sharing a single select line. Bus inputs A<3:0> and B<3:0>, bus output Y<3:0>.
+![4-bit Hybrid Adder Circuit](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/HYBRID_ADDER_4BIT.png)
 
-![4-bit 2:1 mux schematic](4_BIT_2X1_MUX.png)
+### 8-bit Carry Select Adder
+![8-bit CSLA](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/8_BIT_CLSA.png)
 
-### 4.3 1-Bit Hybrid Adder
-
-Cell `HYBRID_ADDER`: 22 transistors and 16 nets. Inverters generate A<sub>bar</sub> and C<sub>in,bar</sub>. Pass-transistor stages produce the XOR/XNOR of A and B (AxorB), and transmission gates then form Sum and Carry.
-
-![1-bit hybrid adder schematic](HYBRID_ADDER.png)
-
-### 4.4 4-Bit Hybrid Adder
-
-Cell `hybrid_addr`: four 1-bit hybrid adders in a ripple chain, with buses A<3:0>, B<3:0>, S<3:0> and a single carry output.
-
-![4-bit hybrid adder](4bit_hybrida_dder.png)
-
-![4-bit hybrid adder (alternate view)](HYBRID_ADDER_4BIT.png)
-
-### 4.5 8-Bit CSLA Top Level
-
-![8-bit CSLA top-level schematic](8_BIT_CLSA.png)
-
-### 4.6 Test Bench
-
-![Adder test bench](ADDER_TEAST_BENCH.png)
-
----
+### Testbench
+![Adder Testbench](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/ADDER_TEAST_BENCH.png)
 
 ## 5. Layout Design
 
-All layouts were drawn in Virtuoso Layout Suite XL.
+All layouts were designed using Cadence Virtuoso Layout Suite XL.
 
-**1-bit hybrid adder**
+### 1-bit Hybrid Adder
+![1-bit Hybrid Adder Layout](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/4_bit_dac_adder_layout.png)
 
-![1-bit hybrid adder layout](HYBRID_ADDER/4_bit_dac_adder.png)
+### 4-bit Hybrid Adder
+![4-bit Hybrid Adder Layout](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/4_bit_dac_hybrid_adder_4bit_layout.png)
 
-**4-bit hybrid adder**
+### 2:1 Multiplexer
+![2:1 MUX Layout](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/2X1_MUX_LAYOUT.png)
 
-![4-bit hybrid adder layout](hybrid_adder_4bit/4_bit_dac_hybrid_adder_4bit_layout.png)
+### 4-bit 2:1 Multiplexer
+![4-bit 2:1 MUX Layout](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/4bit_2X1-mux_layout.png)
 
-**2:1 multiplexer**
+### Complete 8-bit CSLA
+![Complete 8-bit CSLA Layout](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/complete_CSLA_LAYOUT.png)
 
-![2:1 mux layout](CSLA_LAYOUTS/2X1_MUX_LAYOUT.png)
+## 6. Simulation Results
 
-**4-bit 2:1 multiplexer**
+### 8-bit CSLA Output
+![CSLA Output](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/8_BIT_CSLA_OUTPUT_AFTER_CHANGES%20(1).jpeg)
 
-![4-bit 2:1 mux layout](CSLA_LAYOUTS/4bit_2X1-mux_layout.png)
+### CSLA Output Waveform
+![Output CSLA](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/OUTPUT_CLSA.png)
 
-**Complete 8-bit CSLA**
-
-![Complete 8-bit CSLA layout](complete_cls_layout/complete_CSLA_LAYOUT.png)
-
----
-
+![CSLA Output](8_BIT_CARRY_SELECT_ADDER/CSLA_IMAGES/output_CSLA.png)
 ## 6. Physical Verification
 
 | Check | Status | Tool |
