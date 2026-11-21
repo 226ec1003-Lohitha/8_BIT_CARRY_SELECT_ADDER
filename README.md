@@ -162,7 +162,7 @@ Cell `2_1_mux`: one inverter generates the complement of the select S, and two t
 
 Cell `2x1_4bit`: four 2:1 muxes sharing a single select line. Bus inputs A<3:0> and B<3:0>, bus output Y<3:0>.
 
-![4-bit 2:1 mux schematic](4_BIT_2X1%20_MUX.png)
+![4-bit 2:1 mux schematic](4_BIT_2X1_MUX.png)
 
 ### 4.3 1-Bit Hybrid Adder
 
